@@ -1,0 +1,36 @@
+<h2>Member + Exercise</h2>
+
+<form>
+	<fieldset id="MEAdd">
+		<legend>Add an single Exercise to a Member (just 1 of each Exercise Pls):</legend>
+	   Member Name: <select id="MName" name="mname">
+  			{{#each memb}}
+  				<option value={{this.id}}>{{this.f_name}} {{this.l_name}}</option>
+  			{{/each}}
+		</select> &nbsp;&nbsp;
+		Exercise Name: <select id="EName" name="ename">
+			{{#each exer}}
+				<option value={{this.id}}>{{this.name}}</option>
+			{{/each}} </select></br>
+
+		<input id="addMEButton" type="submit" value="Add Exercise to Member">
+
+	</fieldset>
+</form></br></br>
+
+<table id="meTable">
+	<caption><h3>Members and Exercises</h3></caption>
+	<thead>
+		<tr>
+		   <th>Member</th>
+		   <th>Exercise</th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<script src="membexers.js"></script>

@@ -1,0 +1,43 @@
+<h2>Search</h2>
+
+<form>
+	<fieldset id="searchy">
+		<legend>See the Routines and/or Exercises of a Member:</legend>
+	   Member Name: <select id="MName" name="mname">
+  			{{#each membs}}
+  				<option value={{this.id}}>{{this.f_name}} {{this.l_name}}</option>
+  			{{/each}}
+		</select> </br>
+
+		<input id="searchButton" type="submit" value="Search">
+
+	</fieldset>
+</form></br></br>
+
+<table id="slTable">
+	<thead>
+		<tr>
+		   <th>Routines</th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<table id="srTable">
+	<thead>
+		<tr>
+		   <th>Exercises <span id="spanny"> (individual)</span></th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<script src="searchs.js"></script>

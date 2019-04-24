@@ -1,0 +1,36 @@
+<h2>Routine + Exercise</h2>
+
+<form>
+	<fieldset id="REAdd">
+		<legend>Add an single Exercise to a Routine (just 1 of each Exercise Pls):</legend>
+	   Routine Name: <select id="RName" name="rname">
+  			{{#each rout}}
+  				<option value={{this.id}}>{{this.name}}</option>
+  			{{/each}}
+		</select> &nbsp;&nbsp;
+		Exercise Name: <select id="EName" name="ename">
+			{{#each exer}}
+				<option value={{this.id}}>{{this.name}}</option>
+			{{/each}} </select></br>
+
+		<input id="addREButton" type="submit" value="Add Exercise to Routine">
+
+	</fieldset>
+</form></br></br>
+
+<table id="reTable">
+	<caption><h3>Routines and Exercises</h3></caption>
+	<thead>
+		<tr>
+		   <th>Routine</th>
+		   <th>Exercise</th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<script src="routexers.js"></script>

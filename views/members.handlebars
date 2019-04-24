@@ -1,0 +1,45 @@
+<h2>Members</h2>
+
+<form>
+	<fieldset id="MembAdd">
+		<legend>Add a Member:</legend>
+	   First Name: <input id="MFName" type="text" name="fname">
+	   Last Name: <input id="MLName" type="text" name="lname"></br>
+	   Membership: <select id="MType" name="memType">
+  			{{#each membships}}
+  				<option value={{this.id}}>{{this.type}}</option>
+  			{{/each}}
+		</select></br>
+
+<!--
+		Individual Exercises: </br>
+		<div id="checkboxes">
+		{{#each exers}}
+			<input type="checkbox" id={{this.id}}>
+			<label for={{this.id}}> {{this.name}}</label>
+		{{/each}} </div></br> </br>-->
+
+		<input id="addMButton" type="submit" value="Add Member">
+
+	</fieldset>
+</form></br>
+
+<table id="mTable">
+	<caption><h3>Current Members</h3></caption>
+	<thead>
+		<tr>
+		   <th>ID</th>
+		   <th>First Name</th>
+		   <th>Last Name</th>
+		   <th>Memb. ID</th>
+		   <th>Memb. Type</th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<script src="members.js"></script>

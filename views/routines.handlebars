@@ -1,0 +1,42 @@
+<h2>Routines</h2>
+
+<form>
+	<fieldset id="RoutAdd">
+		<legend>Add a Routine:</legend>
+	   Routine Name: <input id="RName" type="text" name="rname">
+	   Belongs to: <select id="rMemb" name="rMembID">
+  			{{#each memb}}
+  				<option value={{this.id}}>{{this.f_name}} {{this.l_name}}</option>
+  			{{/each}}
+		</select></br>
+
+<!--
+		Individual Exercises: </br>
+		<div id="checkboxes">
+		{{#each exers}}
+			<input type="checkbox" id={{this.id}}>
+			<label for={{this.id}}> {{this.name}}</label>
+		{{/each}} </div></br> </br>-->
+
+		<input id="addRButton" type="submit" value="Add Routine">
+
+	</fieldset>
+</form></br></br>
+<table id="rTable">
+	<caption><h3>Current Routines</h3></caption>
+	<thead>
+		<tr>
+		   <th>ID</th>
+		   <th>Routine Name</th>
+		   <th>Member ID</th>
+		   <th>Owner</th>
+		</tr>
+	</thead>
+
+	<!-- tbody gets replaced with new one... -->
+	<tbody>
+	</tbody>
+
+</table>
+
+<script src="routines.js"></script>

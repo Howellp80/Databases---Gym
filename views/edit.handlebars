@@ -1,0 +1,11 @@
+<h2>Edit an Exercise</h2>
+
+<form>
+  Name:&nbsp;<input id="editName" type="text" name="name" value="{{result.name}}"></br>
+  Sets:&nbsp;&nbsp;&nbsp;&nbsp;<input id="editSets" type="text" name="sets" value={{result.sets}}></br>
+  Reps:&nbsp;&nbsp;&nbsp;<input id="editReps" type="text" name="reps" value={{result.reps}}></br>
+  <input id="editID" type="hidden" name="hiddenID" value={{result.id}}>
+  <input id="editExerButton" type="submit" value="Submit Edit">
+</form>
+
+<script src="edit.js"></script>
